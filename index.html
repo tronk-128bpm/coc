@@ -6,21 +6,17 @@
     <title>Tronk</title>
     <style>
         
-html, body {
-    margin: 0;
-    box-sizing: border-box;
-    height: 100%;
-    padding: 0;
-    overflow: auto;
-}
-
 body {
     background-color: black;
     color: #00ff00;
     font-family: 'Courier New', Courier, monospace;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Căn giữa nội dung */
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 form {
@@ -28,7 +24,9 @@ form {
     padding: 20px;
     border-radius: 5px;
     background-color: #000;
-    width: 350px;
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 textarea {
@@ -40,6 +38,7 @@ textarea {
     border-radius: 5px;
     width: 100%;
     resize: none;
+    box-sizing: border-box;
 }
 
 textarea::placeholder {
@@ -56,6 +55,8 @@ input[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 input[type="submit"]:hover {
@@ -70,6 +71,9 @@ input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border: 1px solid #00ff00;
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 .console p {
@@ -95,6 +99,9 @@ input[type="submit"]:hover {
     text-align: left;
     white-space: pre;
     margin: 20px;
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 .guitar-card span {
@@ -110,13 +117,15 @@ input[type="submit"]:hover {
     background-color: black;
     color: #00ff00;
     border-radius: 5px;
-    width: 300px;
+    width: 90%;
+    max-width: 300px;
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
     opacity: 0;
     transform: scale(0.9);
     border: 2px solid #00ff00;
     box-shadow: 0 0 20px #00ff00;
     visibility: hidden;
+    box-sizing: border-box;
 }
 
 #textBox.show {
@@ -147,6 +156,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -157,7 +168,13 @@ button:hover {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
+
         
     </style>
 </head>
